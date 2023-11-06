@@ -1,54 +1,60 @@
 #include <stdio.h>
+#include <string.h>
 
 void somaMatrizes(int matrizA[4][4], int matrizB[4][4]){
 int matrizResultado[4][4];
     
-for(int i = 0; i < 4; i++){for(int j = 0; j < 4; j++){
-        matrizResultado[i][j] = matrizA[i][j] + matrizB[i][j];
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            matrizResultado[i][j] = matrizA[i][j] + matrizB[i][j];
     }
     }
     
     // PRINTF DA MATRIZ
     for(int i = 0; i < 4; i++){
-    for(int j = 0; j < 4; j++){
-        printf("%4d", matrizResultado[i][j]);
+        for(int j = 0; j < 4; j++){
+            printf("%4d", matrizResultado[i][j]);
     }
-    printf("\n");
+        printf("\n");
     }
 }
 
 void subtraiMatrizes(int matrizA[4][4], int matrizB[4][4]){
     int matrizResultado[4][4];
     
-    for(int i = 0; i < 4; i++){for(int j = 0; j < 4; j++){
-        matrizResultado[i][j] = matrizA[i][j] - matrizB[i][j];
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            matrizResultado[i][j] = matrizA[i][j] - matrizB[i][j];
     }
     }
     
     // PRINTF DA 2 PARTE
-    for(int i = 0; i < 4; i++){for(int j = 0; j < 4; j++){
-        printf("%4d", matrizResultado[i][j]);
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            printf("%4d", matrizResultado[i][j]);
     }
-    printf("\n");
+        printf("\n");
     }
 }
 
-void multiplicaMatrizes(int matrizA[4][4], int matrizB[4][4]) {
+void multiplicaMatrizes(int matrizA[4][4], int matrizB[4][4]){
     int matrizResultado[4][4];
     
-    for(int i = 0; i < 4; i++){for(int j = 0; j < 4; j++){
-        matrizResultado[i][j] = 0;
-        for(int k = 0; k < 4; k++){
-        matrizResultado[i][j] += matrizA[i][k] * matrizB[k][j];
-    }
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            matrizResultado[i][j] = 0;
+            for(int k = 0; k < 4; k++){
+                matrizResultado[i][j] += matrizA[i][k] * matrizB[k][j];
+        }
     }
     }
     
     // 3 PARTE
-    for(int i = 0; i < 4; i++){for (int j = 0; j < 4; j++){
-        printf("%4d", matrizResultado[i][j]);
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            printf("%4d", matrizResultado[i][j]);
     }
-    printf("\n");
+        printf("\n");
     }
 }
 
@@ -57,13 +63,15 @@ int main(){
     char operacao[5];
     
     // MATRIZ A & B
-    for (int i = 0; i < 4; i++){for(int j = 0; j < 4; j++){
-        scanf("%d", &matrizA[i][j]);
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            scanf("%d", &matrizA[i][j]);
     }
     }
     
-    for(int i = 0; i < 4; i++){for(int j = 0; j < 4; j++){
-        scanf("%d", &matrizB[i][j]);
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            scanf("%d", &matrizB[i][j]);
     }
     }
     
