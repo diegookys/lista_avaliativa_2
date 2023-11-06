@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 int main(){
-    int conjunto[10];
+int conjunto[10];
     
     for(int i = 0; i < 10; i++){
         scanf("%d", &conjunto[i]);
     }
-    
-    // CONJUNTO PRE-FEITO
     for(int i = 0; i < 10; i++){
         if(i > 0){
             printf(" ");
@@ -16,18 +14,18 @@ int main(){
     }
         printf("\n");
     
-    int tamanhoConjunto = 10;
-    while(tamanhoConjunto > 1){
+    int tamanhoDoConjunto = 10;
+    while(tamanhoDoConjunto > 1){
         
     // NOVO CONJUNTO
-    for(int i = 0; i < tamanhoConjunto - 1; i++){
+    for(int i = 0; i < tamanhoDoConjunto - 1; i++){
         conjunto[i] = conjunto[i] + conjunto[i + 1];
     }
-        tamanhoConjunto--;
+        tamanhoDoConjunto--;
         
-    for(int i = 0; i < tamanhoConjunto; i++){
+    for(int i = 0; i < tamanhoDoConjunto; i++){
         printf("%d", conjunto[i]);
-        if(i < tamanhoConjunto - 1){
+        if(i < tamanhoDoConjunto - 1){
             printf(" ");
         }
         }
